@@ -9,8 +9,8 @@ import speech_data as data
 import tensorflow as tf
 print("You are using tensorflow version "+ tf.__version__) #+" tflearn version "+ tflearn.version)
 
-# path='data/spoken_numbers_pcm/'
-path='data/people/'
+path='data/spoken_numbers_pcm/'
+# path='data/people/'
 number_classes=0
 speakers=None
 model=None
