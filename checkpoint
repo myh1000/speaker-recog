@@ -1,2 +1,2 @@
-model_checkpoint_path: "vrecog.tflearn"
-all_model_checkpoint_paths: "vrecog.tflearn"
+model_checkpoint_path: "srecog.tflearn"
+all_model_checkpoint_paths: "srecog.tflearn"

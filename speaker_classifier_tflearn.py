@@ -28,7 +28,7 @@ net = tflearn.dropout(net, 0.5)
 net = tflearn.fully_connected(net, number_classes, activation='softmax')
 net = tflearn.regression(net, optimizer='adam', loss='categorical_crossentropy')
 model = tflearn.DNN(net)
-model.load('vrecog.tflearn')
+model.load('srecog.tflearn')
 
 def train():
 	"""Trains the neural network"""
@@ -51,7 +51,7 @@ def train():
 	batch=data.wave_batch_generator(batch_size=1000, source=data.Source.DIGIT_WAVES, target=data.Target.speaker,path=path)
 	X,Y=next(batch)
 	model.fit(X, Y, n_epoch=100, show_metric=True, snapshot_step=100)
-	model.save('vrecog.tflearn')
+	model.save('srecog.tflearn')
 
 def test(fname):
 	"""Predicts the person talking in the wav file
